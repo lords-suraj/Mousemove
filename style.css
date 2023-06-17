@@ -1,0 +1,47 @@
+div{
+    height: 2000px;
+    width:2000px;
+    background-color: yellow;
+}
+
+
+.cursor_area{
+    position: fixed;
+    left: 0;
+    top: 0;width: 100%;
+    height: 100vh;
+    /* pointer-events: none; */
+}
+.cursor{
+ position: fixed;
+ height: 60px;
+ width: 60px;
+ border-radius: 50%;
+ box-shadow: 0 0 0 5px rgba(255,255,255,1);
+ pointer-events: none;
+ z-index: 10000;
+ transition: all 0.5s ease-in-out;
+ animation: cursorAnim 0.5s;
+ animation-timing-function: linear;
+ animation-fill-mode: forwards;
+}
+
+@keyframes cursorAnim {
+
+    0%{
+        transform: scale(1);
+        box-shadow: 0 0 0 5px rgba(252, 253, 253, 0.504);
+    }
+    25%{
+        transform: scale(1.5);
+        box-shadow: 0 0 0 5px rgba(242, 245, 245, 0.8);
+    }
+    50%{
+        transform: scale(2);
+        box-shadow: 0 0 0 5px rgba(238, 240, 240, 0.5);
+    }
+    100%{
+        transform: scale(1);
+        box-shadow: 0 0 0 5px rgba(247, 242, 242, 0);
+    }
+}
